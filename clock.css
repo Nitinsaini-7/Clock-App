@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+
+}
+body{
+    background-color: #212121;
+    color: white;
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.heading{
+    text-align: center;
+    font-size: 40px;
+}
+.heading span{
+    color: aqua;
+}
+.container{
+    padding: 8px;
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid aqua;
+    box-shadow: aqua 0px 0px 10px inset;
+}
+.clock{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+.dot{
+    width: 3px;
+    height: 3px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+.clock span{
+    position: absolute;
+    transform: rotate(calc(6deg * var(--i)));
+    inset: 5px;
+    text-align: center;
+    
+    
+}
+.clock span b{
+    transform: rotate(calc(-6deg * var(--i)));
+    display: inline-block;
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 1;
+    border: 2px solid black;
+}
+.niddle{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hour{
+    position: absolute;
+    background-color: red;
+    width: 4px;
+    height: 80px;
+    z-index: 0;
+}
+.minute {
+    position: absolute;
+    background-color: white;
+    width: 4px;
+    height: 100px;
+    z-index: 0;
+}
+.second {
+    position: absolute;
+    background-color: aqua;
+    width: 2px;
+    height: 120px;
+    z-index: 0;
+}
+.digital-clock-container{
+    padding: 5px;
+    position: relative;
+    border-radius: 100px;
+    border: 1px solid aqua;
+    box-shadow: aqua 0px 0px 10px inset;
+}
+.digital-clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 30px;
+    border-radius: 50px;
+}
+.digital-clock-time{
+    color: aqua;
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 600px){
+    
+    .heading{
+        margin-top:-20px
+    }
+    
+    .clock{
+        width: 290px;
+        height: 290px;
+    }
+
+    .digital-clock{
+        padding: 10px;
+        height: 25px;
+    }
+
+    .digital-clock-time{
+        font-size: 30px;
+    }
+
+    .hour{
+        width: 4px;
+        height: 75px;
+    }
+    .minute {
+        width: 4px;
+        height: 90px;
+    }
+    .second {
+        width: 2px;
+        height: 105px;
+    }
+    .digital-clock-container{
+        margin-bottom:180px
+    }
+}

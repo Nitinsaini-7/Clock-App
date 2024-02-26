@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="timer.css">
+    <script async src="timer.js"></script>
+</head>
+<body>
+    <h1 class="heading">Ti<span>mer</span></h1>
+    <div class="container">
+        <div class="timer">
+            <input id="inputh" type="number" placeholder="00"><span class="colon">:</span>
+            <input id="inputm" type="number" placeholder="00"><span class="colon">:</span>
+            <input id="inputs" type="number" placeholder="00">
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="start-btn" onclick="start_counting()">Start</button>
+        <button class="pause-btn" onclick="pause_counting()">Pause</button>
+        <button class="stop-btn" onclick="end_counting()">Stop</button>
+    </div>
+    <p class="currentTime">current time: </p>
+</body>
+</html>
