@@ -3,7 +3,7 @@
 }
 
 body{
-  background-color: black;
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   font-family: Arial, Helvetica, sans-serif;
 }
 .heading{
@@ -36,7 +36,7 @@ body{
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.100);
+  box-shadow: 0px 2px 10px rgb(231, 231, 231);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -65,6 +65,8 @@ body{
   }
   .flip-card-front img{
       width: 220px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgb(226, 226, 226);
   }
   .flip-card-front h1{
     font-size: 35px;
